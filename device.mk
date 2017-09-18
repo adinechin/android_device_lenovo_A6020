@@ -135,7 +135,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # IMS
 PRODUCT_PACKAGES += \
-    libshims_boringssl
+    libshims_boringssl \
+    libshims_ims
 
 # Keylayout
 PRODUCT_COPY_FILES += \
