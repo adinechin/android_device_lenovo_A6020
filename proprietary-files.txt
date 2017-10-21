@@ -68,7 +68,6 @@ etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
 etc/permissions/qti_permissions.xml
 etc/sec_config
-etc/sound_trigger_mixer_paths.xml
 etc/wifi/WCNSS_qcom_cfg.ini
 etc/xtwifi.conf
 vendor/etc/calmodule.cfg
