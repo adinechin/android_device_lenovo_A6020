@@ -68,7 +68,7 @@
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IMoKeePower</name>
+            <name>IMokeePower</name>
             <instance>default</instance>
         </interface>
     </hal>
