@@ -1,6 +1,6 @@
 #!/bin/bash
 VENDOR=lenovo
-DEVICE=a6020
+DEVICE=A6020
 
 function extract() {
     for FILE in `egrep -v '(^#|^$)' $1`; do

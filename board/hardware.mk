@@ -1,9 +1,9 @@
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
 
-# Mokee hardware
+# Lineage hardware
 BOARD_HARDWARE_CLASS += \
-    device/lenovo/a6020/mkhw
+    device/lenovo/A6020/lineagehw
 
 #DoubleTapToWake support
 TARGET_TAP_TO_WAKE_NODE := "/sys/android_touch/doubletap2wake"
