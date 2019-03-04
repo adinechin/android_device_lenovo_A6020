@@ -8,5 +8,6 @@ PRODUCT_PACKAGES += \
     init.qcom-ims.rc \
     init.qcom.mem.sh \
     init.qcom.post_boot.sh \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    loggy.sh
 
