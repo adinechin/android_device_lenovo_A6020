@@ -255,7 +255,11 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl
 
 # Telephony
-PRODUCT_PACKAGES += telephony-ext ims-ext-common
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    telephony-ext \
+    qti-telephony-common
+
 PRODUCT_BOOT_JARS += telephony-ext
 
 # TextClassifier
