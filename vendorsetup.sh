@@ -1,1 +1,1 @@
-add_lunch_combo lineage_A6020-eng
+add_lunch_combo cm_A6020-eng

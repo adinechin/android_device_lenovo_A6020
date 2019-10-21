@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,16 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include $(CLEAR_VARS)
-LOCAL_SHARED_LIBRARIES := libhidltransport
-LOCAL_MODULE := android.hidl.base@1.0
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-include $(BUILD_SHARED_LIBRARY)
+$(call inherit-product, device/lenovo/A6020/full_A6020.mk)
 
-include $(CLEAR_VARS)
-LOCAL_SHARED_LIBRARIES := libhidltransport
-LOCAL_MODULE := android.hidl.manager@1.0
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-include $(BUILD_SHARED_LIBRARY)
+# Inherit some common AEX stuff.
+$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+
+# Boot animation
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_BOOTANIMATION_HALF_RES := true
+
+## Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := A6020
+PRODUCT_NAME := cm_A6020
+
+EXTENDED_BUILD_TYPE=UNOFFICIAL
