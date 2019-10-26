@@ -23,3 +23,9 @@ include $(LOCAL_PATH)/product/*.mk
 
 $(call inherit-product, vendor/lenovo/A6020/A6020-vendor.mk)
 
+# Radio
+PRODUCT_PACKAGES += \
+    qti-telephony-common
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
