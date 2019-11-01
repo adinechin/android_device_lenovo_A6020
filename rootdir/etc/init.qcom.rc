@@ -73,6 +73,10 @@ on boot
     mkdir /dev/socket/qmux_gps 0770 gps gps
     chmod 2770 /dev/socket/qmux_gps
 
+    # Wake Gestures
+    chown system radio /sys/android_touch/doubletap2wake
+    chmod 0660 /sys/android_touch/doubletap2wake
+
     # Create persist folders
     mkdir /persist/alarm 0770 system system
     mkdir /persist/display 0770 system graphics
