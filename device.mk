@@ -23,8 +23,17 @@ include $(LOCAL_PATH)/product/*.mk
 
 $(call inherit-product, vendor/lenovo/A6020/A6020-vendor.mk)
 
+# Wifi and Bluetooth
+PRODUCT_PACKAGES += \
+		wcnss_service \
+		WCNSS_qcom_cfg.ini
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
+
 # Radio
 PRODUCT_PACKAGES += \
+    wcnss_service \
     qti-telephony-common
 
 PRODUCT_BOOT_JARS += \
