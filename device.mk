@@ -256,11 +256,7 @@ PRODUCT_PACKAGES += \
 
 # Telephony
 PRODUCT_PACKAGES += \
-    ims-ext-common \
-    telephony-ext \
-    qti-telephony-common
-
-PRODUCT_BOOT_JARS += telephony-ext
+    ims-ext-common
 
 # TextClassifier
 PRODUCT_PACKAGES += \
@@ -307,3 +303,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
+
+ # Radio
+PRODUCT_PACKAGES += \
+    qti-telephony-common
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
