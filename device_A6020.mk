@@ -224,7 +224,14 @@ PRODUCT_PACKAGES += \
     tcpdump \
     wcnss_service
 
+# Radio
+PRODUCT_PACKAGES += \
+    qti-telephony-common
 
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
+TARGET_PROVIDES_QTI_TELEPHONY_JAR=true
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_A6020
