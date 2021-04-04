@@ -18,9 +18,9 @@
 # inherit from the proprietary version
 include vendor/lenovo/A6020/BoardConfigVendor.mk
 
-DEVICE_PATH := device/lenovo/A6020
+LOCAL_PATH := device/lenovo/A6020
 
-TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
+TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_PHONY_TARGETS := true
@@ -60,7 +60,7 @@ USE_XML_AUDIO_POLICY_CONF := 1
 TARGET_OTA_ASSERT_DEVICE := A6020,A6020a40,A6020a41,A6020a46,A6020l36,A6020l37,K32c36,k5,k5_plus,vibe_k5
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
@@ -133,7 +133,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USES_MKE2FS := true
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(LOCAL_PATH)/config.fs
 TARGET_EXFAT_DRIVER := exfat
 
 # FM
@@ -145,14 +145,14 @@ TARGET_QCOM_NO_FM_FIRMWARE := true
 VENDOR_SECURITY_PATCH := 2016-10-01
 
 # System properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_SYSTEM_PROP += device/lenovo/A6020/system.prop
 
 # GPS
 USE_DEVICE_SPECIFIC_GPS := true
 TARGET_NO_RPC := true
 
 # HIDL
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
@@ -203,19 +203,19 @@ TARGET_BOARD_PLATFORM := msm8916
 
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.full
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.full
 
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
+TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)
 
 # RIL
 TARGET_RIL_VARIANT := caf
 BOARD_PROVIDES_LIBRIL := false
 
 # SELinux
-#include device/qcom/sepolicy-legacy/sepolicy.mk
-#BOARD_SEPOLICY_DIRS += device/lenovo/A6020/sepolicy
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy-tmp
+include device/qcom/sepolicy-legacy/sepolicy.mk
+#BOARD_VENDOR_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/vendor
+#PLAT_PRIVATE_POLICY += $(LOCAL_PATH)/sepolicy/private
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
